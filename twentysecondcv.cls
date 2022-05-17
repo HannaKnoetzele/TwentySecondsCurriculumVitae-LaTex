@@ -107,6 +107,7 @@
 \newcommand{\cvnumberphone}[1]{\renewcommand{\givennumberphone}{#1}}    % phone
 \newcommand{\cvaddress}[1]{\renewcommand{\givencvaddress}{#1}}          % address
 \newcommand{\cvsite}[1]{\renewcommand{\givencvsite}{#1}}                % site
+\newcommand{\cvlinkedIn}[1]{\renewcommand{\givenlinkedIn}{#1}}          % linkedIn
 \newcommand{\aboutme}[1]{\renewcommand{\givenaboutme}{  \justifying#1}} % about me
 \newcommand{\profilepic}[1]{\renewcommand{\givenprofilepic}{#1}}        % picture
 \newcommand{\cvname}[1]{\renewcommand{\givencvname}{#1}}                % name
@@ -120,6 +121,7 @@
 \newcommand{\givenaboutme}{}         % about me
 \newcommand{\givenprofilepic}{}      % picture
 \newcommand{\givencvsite}{}          % site
+\newcommand{\givencvlinkedIn}{}      % linkedIn
 \newcommand{\givencvjobtitle}{}      % job title
 
 % icon in blue circle; #1 -> icon
@@ -210,6 +212,8 @@
         \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \givennumberphone\\}
         % CV site
         \ifthenelse{\equal{\givencvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \href{\givencvsite}{\textcolor{cerulean}\givencvsite}\\}
+        % CV linkedIn
+        \ifthenelse{\equal{\givencvlinkedIn}{}}{}{\textsc{\Large\icon{\linkedIn}} & \href{\givencvlinkedIn{\textcolor{cerulean}\givencvlinkedIn}\\}
         % CV mail
         \ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\givencvmail}{\givencvmail}}
       \end{tabular}
